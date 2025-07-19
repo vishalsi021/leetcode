@@ -9,7 +9,7 @@ class Solution {
                                    "Sixty", "Seventy", "Eighty", "Ninety"};
 
 
-    private final String[] THOUSANDS = {"", "Thousand", "Million", "Billion"};
+    private final String[] THOUSANDS = {" ", "Thousand", "Million", "Billion"};
 
     public String numberToWords(int num) {
         if (num == 0) return "Zero";
@@ -28,8 +28,6 @@ class Solution {
 
         return result.trim();
     }
-
-    // Converts a number < 1000 to words
     private String helper(int num) {
         if (num == 0) return "";
         else if (num < 20) return BELOW_20[num] + " ";
